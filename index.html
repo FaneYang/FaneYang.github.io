@@ -57,7 +57,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lxking.com"></form>
@@ -81,7 +81,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Leaning-log"><a href="#Leaning-log" class="headerlink" title="Leaning log"></a>Leaning log</h1><h6 id="2017-04-05"><a href="#2017-04-05" class="headerlink" title="2017.04.05"></a>2017.04.05</h6><h3 id="mac上-openCV的安装"><a href="#mac上-openCV的安装" class="headerlink" title="mac上 openCV的安装"></a>mac上 openCV的安装</h3><ol>
-<li><p>去 <a href="http://opencv.org" target="_blank" rel="external">http://opencv.org</a> 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩</p>
+<li><p>去 <a href="http://opencv.org">http://opencv.org</a> 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩</p>
 </li>
 <li><p>brew安装cmake   brew install cmake</p>
 </li>
@@ -95,51 +95,15 @@
 </code></pre><p>由于要做python项目，在import cv2时报<br><code>ImportError: No module named cv2</code>的错误，下面还要设置环境变量:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">* 打开一个终端，cd ~</div><div class="line"> </div><div class="line">* vim .profile</div><div class="line"> </div><div class="line">* 添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。</div><div class="line"> </div><div class="line">* source .profile</div></pre></td></tr></table></figure>
 <p>至此openCV的安装工作全部完成了！</p>
-<h3 id="硬件操作相关-pyfirmata"><a href="#硬件操作相关-pyfirmata" class="headerlink" title="硬件操作相关 pyfirmata"></a>硬件操作相关 <a href="https://github.com/tino/pyFirmata" target="_blank" rel="external">pyfirmata</a></h3><pre><code>可以通过pip安装： pip install pyfirmata
-</code></pre><h3 id="邮件操作相关-yagmail"><a href="#邮件操作相关-yagmail" class="headerlink" title="邮件操作相关 yagmail"></a>邮件操作相关 <a href="http://lxking.com">yagmail</a></h3><pre><code>可以通过pip安装： pip install yagmail
-</code></pre><h3 id="关于开发工具pycharm里头文件自动补全的设置"><a href="#关于开发工具pycharm里头文件自动补全的设置" class="headerlink" title="关于开发工具pycharm里头文件自动补全的设置"></a>关于开发工具pycharm里头文件自动补全的设置</h3><p>想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录<code>/Library/Python/2.7/site-packages</code>中<br>如要将openCV的文件cv.py,cv2.so链接到 /Library/Python/2.7/site-packages中的具体做法如下：</p>
-<pre><code>cd /Library/Python/2.7/site-packages
-sudo ln -s ~/opencv/build/lib/cv.py cv.py
-sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
-</code></pre><p>openCV的路径以实际自己的安装路径为准，如果没有cv.py，则创建，其中只有一行代码：</p>
-<pre><code>from cv2.cv import * 
-</code></pre><p>这就是代码的自动补全功能，其他库可以参照此方法设置</p>
-<h3 id="openCV-用法"><a href="#openCV-用法" class="headerlink" title="openCV 用法"></a>openCV 用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#coding:utf-8</div><div class="line"></div><div class="line">import cv2</div><div class="line"></div><div class="line">img = cv2.imread(&apos;&apos;) #加载路径下的一张图片</div><div class="line">cv2.namedWindow(&quot;Image&quot;) #创建一个窗口</div><div class="line">cv2.imshow(&quot;Image&quot;, img) #窗口中显示图像</div><div class="line">cv2.waitKey (0) </div><div class="line">cv2.destroyAllWindows() #释放</div></pre></td></tr></table></figure>
-<h6 id="2017-04-07"><a href="#2017-04-07" class="headerlink" title="2017.04.07"></a>2017.04.07</h6><h2 id="关于openCV的进一步使用"><a href="#关于openCV的进一步使用" class="headerlink" title="关于openCV的进一步使用"></a>关于openCV的进一步使用</h2><h3 id="openCV安装后找不到相关类库"><a href="#openCV安装后找不到相关类库" class="headerlink" title="openCV安装后找不到相关类库"></a>openCV安装后找不到相关类库</h3><ul>
-<li>可以在<a href="https://realpython.com/blog/python/face-detection-in-python-using-a-webcam/" target="_blank" rel="external">这里</a> 下载及阅读人脸识别的源码，特别是readme，一定要仔细看一遍再去跑工程。关于Python2和Python3不同版本的坑已经很多了，这里同样遇到了版本不同埋的坑，openCV2和openCV3也是有很大不同的，按照blog上的提示，</li>
-<li>一定不要略过blog而去直接跑工程，</li>
-<li>一定不要略过readme就去跑工程</li>
-</ul>
-<p>会轻松很多，避免踩坑</p>
-<h3 id="scrapy-安装"><a href="#scrapy-安装" class="headerlink" title="scrapy 安装"></a>scrapy 安装</h3><p>安装时一直报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Found existing installation: six 1.4.1</div><div class="line">DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.</div><div class="line">    Uninstalling six-1.4.1:</div><div class="line">Exception:</div></pre></td></tr></table></figure></p>
-<p>在Stack Overflow上找到解决方法：</p>
-<pre><code>sudo pip install scrapy --ignore-installed six
-</code></pre><h6 id="2017-04-10"><a href="#2017-04-10" class="headerlink" title="2017.04.10"></a>2017.04.10</h6><h2 id="爬虫相关"><a href="#爬虫相关" class="headerlink" title="爬虫相关"></a>爬虫相关</h2><p>关于scrapy 和 pyspider<br>pyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider </p>
-<p>安装都是通过 pip 来安装</p>
-<p>关于安装类库报错</p>
-<pre><code>opetation not permitted
-</code></pre><p>问题分析：在经历了Xcdoe ghost以后，苹果加强了安全控制，启用了更高的安全性保护机制 —系统完整性保护（system Integrity Protection）SIP,在10.11以上的版本会出现此类错误，即使是sudo模式。</p>
-<p>解决这个的办法是：<br><img src="file:///Users/faneyoung/Desktop/modSetting.png" alt=""></p>
-<p>在安装完相应类库后，再次进入恢复模式开启SIP：</p>
-<pre><code>csrutil anable
-</code></pre><h4 id="pyspider安装成功后-出现的问题"><a href="#pyspider安装成功后-出现的问题" class="headerlink" title="pyspider安装成功后 出现的问题"></a>pyspider安装成功后 出现的问题</h4><p>在pyspider安装成功后，执行pyspider命令出现：</p>
-<pre><code>phantomjs not found, continue running without it.
-</code></pre><p>这是缺少phantomjs引起的。</p>
-<h5 id="PhantomJS"><a href="#PhantomJS" class="headerlink" title="PhantomJS"></a>PhantomJS</h5><p>PhantomJS 是一个基于 WebKit 的服务器端 JavaScript API。它全面支持web而不需浏览器支持，其快速，原生支持各种Web标准： DOM 处理, CSS 选择器, JSON, Canvas, 和 SVG。 PhantomJS 可以用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等。<br>mac下通过 brew 安装 ：</p>
-<pre><code>brew install phantomjs
-</code></pre><p>再次执行pyspider<br>有出现新问题：</p>
-<pre><code>pyspider Error: Could not create web server listening on port 25555
-</code></pre><p>接着折腾<br>在github的issue中找到</p>
-<pre><code>#423  : Reboot the PC,or remove phantomjs can fix it.
-</code></pre><p>刚装过phantomjs，不可能现在就卸载，所以 重启<br>竟然成功了<br>重新 执行 pyspider </p>
-<pre><code>输出：phantomjs fetcher running on port 25555
-</code></pre><p>启动成功了<br>打开浏览器访问 <a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a></p>
-<p>至此，pyspider安装完成了，后面就要对scrapy和pyspider的进一步深入学习</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/04/05/python-log/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/05/python-log/" data-id="cj1bwyalw0000mlptaei0h01d" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/05/python-log/" data-id="cj1bx89xi0002nyptmeuj1gvb" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -163,12 +127,12 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
       
         <h1 id="国富论"><a href="#国富论" class="headerlink" title="国富论"></a>国富论</h1><h3 id="亚当-斯密"><a href="#亚当-斯密" class="headerlink" title="亚当.斯密"></a>亚当.斯密</h3><p>这是国家复兴的秘密，这是一代伟大人物的独特视角！</p>
 <p><a href="http://www.lxking.com" target="_blank" rel="external">想看更多</a></p>
-<p><strong>给作者留言</strong> <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x75;&#116;&#114;&#x61;&#x73;&#x6e;&#x6f;&#119;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#x75;&#116;&#114;&#x61;&#x73;&#x6e;&#x6f;&#119;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;</a></p>
+<p><strong>给作者留言</strong> <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#117;&#x74;&#114;&#97;&#115;&#110;&#111;&#119;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#117;&#x74;&#114;&#97;&#115;&#110;&#111;&#119;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/01/guofulun/" data-id="cj1bwyam00001mlptgpq1hq53" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/01/guofulun/" data-id="cj1bx89xa0000nypt6801w8j3" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -197,14 +161,14 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
 <p><a href="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1491036873809&amp;di=e8415f1c4a1addb62b50f0c7a13d5471&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D3a1291116a224f4a5799731b39f69044%2F9c5a30f082025aaf2ce699fcfcedab64024f1afe.jpg" target="_blank" rel="external"><em>孔子用转图</em></a></p>
 <h6 id="以下全是重要内容"><a href="#以下全是重要内容" class="headerlink" title="以下全是重要内容"></a>以下全是重要内容</h6><p>孔子用代码教育弟子：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">def husi()</div><div class="line">	print &apos;岂可一人独乎 !&apos;</div><div class="line"></div><div class="line">husi();</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">def test()</div><div class="line">	print &apos;大家一起乎,不亦乐乎&apos;</div><div class="line">test()</div></pre></td></tr></table></figure>
-<p>*代码版权归属 <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x75;&#x74;&#x72;&#97;&#x73;&#110;&#111;&#119;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x75;&#x74;&#x72;&#97;&#x73;&#110;&#111;&#119;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>*代码版权归属 <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x75;&#x74;&#114;&#x61;&#x73;&#110;&#111;&#x77;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x75;&#x74;&#114;&#x61;&#x73;&#110;&#111;&#x77;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p>放个数学公式：</p>
 <math display="block"><br>    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup><br>    <mo>=</mo><br>    <mi>B</mi><br></math>
 
 
 
 <p><a href="https://www.xcenery.com" target="_blank" rel="external">更多内容联系作者</a></p>
-<p><a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#102;&#97;&#x6e;&#x65;&#x79;&#111;&#x75;&#x6e;&#x67;&#64;&#104;&#x6f;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#102;&#97;&#x6e;&#x65;&#x79;&#111;&#x75;&#x6e;&#x67;&#64;&#104;&#x6f;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a></p>
+<p><a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#102;&#97;&#x6e;&#x65;&#121;&#111;&#117;&#110;&#x67;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#102;&#97;&#x6e;&#x65;&#121;&#111;&#117;&#110;&#x67;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <h2 id="这是无序列表"><a href="#这是无序列表" class="headerlink" title="这是无序列表"></a>这是无序列表</h2><ul>
 <li>这是一个无序列表的L1</li>
 <li>L2</li>
@@ -220,7 +184,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/01/MyFistBlog/" data-id="cj1bwyam20002mlptkpxq91ej" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/01/MyFistBlog/" data-id="cj1bx89xe0001nypththetyyu" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -245,7 +209,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
@@ -255,7 +219,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         

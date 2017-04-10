@@ -30,7 +30,7 @@ cd到解压后的文件夹中，
 
 123456789* mkdir release	* cd release	* cma">
 <meta property="og:image" content="http://lxking.com/file:///Users/faneyoung/Desktop/modSetting.png">
-<meta property="og:updated_time" content="2017-04-10T09:25:31.000Z">
+<meta property="og:updated_time" content="2017-04-10T09:33:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fane`s Blog">
 <meta name="twitter:description" content="Leaning log2017.04.05mac上 openCV的安装
@@ -87,7 +87,7 @@ cd到解压后的文件夹中，
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lxking.com"></form>
@@ -123,6 +123,7 @@ cd到解压后的文件夹中，
 </code></pre><p>由于要做python项目，在import cv2时报<br><code>ImportError: No module named cv2</code>的错误，下面还要设置环境变量:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">* 打开一个终端，cd ~</div><div class="line"> </div><div class="line">* vim .profile</div><div class="line"> </div><div class="line">* 添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。</div><div class="line"> </div><div class="line">* source .profile</div></pre></td></tr></table></figure>
 <p>至此openCV的安装工作全部完成了！</p>
+<a id="more"></a>
 <h3 id="硬件操作相关-pyfirmata"><a href="#硬件操作相关-pyfirmata" class="headerlink" title="硬件操作相关 pyfirmata"></a>硬件操作相关 <a href="https://github.com/tino/pyFirmata" target="_blank" rel="external">pyfirmata</a></h3><pre><code>可以通过pip安装： pip install pyfirmata
 </code></pre><h3 id="邮件操作相关-yagmail"><a href="#邮件操作相关-yagmail" class="headerlink" title="邮件操作相关 yagmail"></a>邮件操作相关 <a href="http://lxking.com">yagmail</a></h3><pre><code>可以通过pip安装： pip install yagmail
 </code></pre><h3 id="关于开发工具pycharm里头文件自动补全的设置"><a href="#关于开发工具pycharm里头文件自动补全的设置" class="headerlink" title="关于开发工具pycharm里头文件自动补全的设置"></a>关于开发工具pycharm里头文件自动补全的设置</h3><p>想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录<code>/Library/Python/2.7/site-packages</code>中<br>如要将openCV的文件cv.py,cv2.so链接到 /Library/Python/2.7/site-packages中的具体做法如下：</p>
@@ -167,7 +168,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/05/python-log/" data-id="cj1bwyalw0000mlptaei0h01d" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/05/python-log/" data-id="cj1bx89xi0002nyptmeuj1gvb" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -178,7 +179,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
   
     <a href="/2017/04/01/guofulun/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ouder</strong>
       <div class="article-nav-title"></div>
     </a>
   
@@ -201,7 +202,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li></ul>
     </div>
@@ -211,7 +212,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
