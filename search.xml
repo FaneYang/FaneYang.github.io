@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[python learning | 三]]></title>
+      <url>%2F2017%2F04%2F11%2FLearning-3%2F</url>
+      <content type="text"><![CDATA[爬虫相关关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider安装都是通过 pip 来安装。 scrapy 安装pip install scrapy 安装时一直报错1234Found existing installation: six 1.4.1DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project. Uninstalling six-1.4.1:Exception: 在Stack Overflow上找到解决方法： sudo pip install scrapy --ignore-installed six pyspider的安装及遇到的问题pip install pyspider 出现报错，关键点是： opetation not permitted 问题分析：在经历了Xcdoe ghost以后，苹果加强了安全控制，启用了更高的安全性保护机制 —系统完整性保护（system Integrity Protection）SIP,在10.11以上的版本会出现此类错误，即使是sudo模式。 解决这个的办法是： 在安装完相应类库后，再次进入恢复模式开启SIP： csrutil anable pyspider的使用 在pyspider安装成功后，执行pyspider命令出现： phantomjs not found, continue running without it. 这是缺少phantomjs引起的。 PhantomJS PhantomJS 是一个基于 WebKit 的服务器端 JavaScript API。它全面支持web而不需浏览器支持，其快速，原生支持各种Web标准： DOM 处理, CSS 选择器, JSON, Canvas, 和 SVG。 PhantomJS 可以用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等。mac下通过 brew 安装 ： brew install phantomjs 再次执行pyspider有出现新问题： pyspider Error: Could not create web server listening on port 25555 接着折腾 在github的issue中找到 #423 : Reboot the PC,or remove phantomjs can fix it. 刚装过phantomjs，不可能现在就卸载，所以 重启竟然成功了重新 执行 pyspider 输出：phantomjs fetcher running on port 25555 启动成功了 ！ 打开浏览器访问 http://localhost:5000/ 至此，pyspider安装完成了，后面就要对scrapy和pyspider的进一步深入学习]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[python learning | 二]]></title>
+      <url>%2F2017%2F04%2F11%2FLearning-2%2F</url>
+      <content type="text"><![CDATA[常用类库安装及学习 硬件操作相关 pyfirmata 可以通过pip安装： pip install pyfirmata 邮件操作相关 yagmail 可以通过pip安装： pip install yagmail 头文件自动补全 关于开发工具pycharm里头文件自动补全的设置 想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录/Library/Python/2.7/site-packages中如要将openCV的文件cv.py,cv2.so链接到 /Library/Python/2.7/site-packages中的具体做法如下： cd /Library/Python/2.7/site-packages sudo ln -s ~/opencv/build/lib/cv.py cv.py sudo ln -s ~/opencv/build/lib/cv2.so cv2.so openCV的路径以实际自己的安装路径为准，如果没有cv.py，则创建，其中只有一行代码： from cv2.cv import * 这就是代码的自动补全功能，其他库可以参照此方法设置]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[python learning | 一]]></title>
+      <url>%2F2017%2F04%2F11%2FLearning-1%2F</url>
+      <content type="text"><![CDATA[mac上 openCV的安装 去 http://opencv.org 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩 brew安装cmake brew install cmake cd到解压后的文件夹中， 继续执行如下命令： 1234567891.mkdir release 2.cd release 3.cmake -G &quot;Unix Makefiles&quot; .. 4.make #此处会进行make的相关操作，会耗费很大一会 5.sudo make install #install lib文件到/usr/local/lib/，头文件到 /usr/local/include/ 至此，openCV安装完成 注：如果cmake出现错误，请到苹果开发者网站那里下载Command Line Tools安装。（关键） 由于要做python项目，在import cv2时报ImportError: No module named cv2的错误，下面还要设置环境变量: 12345671.打开一个终端，cd ~ 2.vim .profile 3.添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。 4.source .profile 至此openCV的安装工作全部完成了！ openCV 的简单使用123456789#coding:utf-8import cv2img = cv2.imread(&apos;&apos;) #加载路径下的一张图片cv2.namedWindow(&quot;Image&quot;) #创建一个窗口cv2.imshow(&quot;Image&quot;, img) #窗口中显示图像cv2.waitKey (0) cv2.destroyAllWindows() #释放 2017.04.07关于openCV的进一步使用openCV安装后找不到相关类库 可以在这里 下载及阅读人脸识别的源码，特别是readme，一定要仔细看一遍再去跑工程。关于Python2和Python3不同版本的坑已经很多了，这里同样遇到了版本不同埋的坑，openCV2和openCV3也是有很大不同的，按照blog上的提示， 一定不要略过blog而去直接跑工程一定不要略过readme 会轻松很多，避免踩坑]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[md格式学习]]></title>
+      <url>%2F2017%2F04%2F11%2FMyFistBlog%2F</url>
+      <content type="text"><![CDATA[md格式学习&lt;论语&gt; 孔子曰:打架用砖乎!不亦乱乎! 照脸乎!乎不死,再乎! 孔子用转图 以下全是重要内容孔子用代码教育弟子： 12345678910def husi() print &apos;岂可一人独乎 !&apos;husi();def test() print &apos;大家一起乎,不亦乐乎&apos;test() *代码版权归属 &#x75;&#x74;&#x72;&#x61;&#x73;&#x6e;&#x6f;&#119;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d; 放个数学公式： A S T = B 更多内容联系作者 &#x66;&#x61;&#110;&#x65;&#x79;&#x6f;&#x75;&#110;&#103;&#64;&#104;&#x6f;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109; 这是无序列表 这是一个无序列表的L1 L2 L3 L4 这是有序列表 row1 row2 row3]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[国富论]]></title>
+      <url>%2F2017%2F04%2F11%2Fguofulun%2F</url>
+      <content type="text"><![CDATA[国富论亚当.斯密这是国家复兴的秘密，这是一代伟大人物的独特视角！ 想看更多 给作者留言 &#117;&#x74;&#x72;&#x61;&#x73;&#110;&#x6f;&#119;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;]]></content>
+    </entry>
+
+    
+  
+  
+</search>
