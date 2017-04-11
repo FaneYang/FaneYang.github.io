@@ -25,7 +25,7 @@ brew安装cmake   brew install cmake
 cd到解压后的文件夹中，
 
 继续执行如下命令：">
-<meta property="og:updated_time" content="2017-04-11T02:36:27.000Z">
+<meta property="og:updated_time" content="2017-04-11T03:09:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python learning | 一">
 <meta name="twitter:description" content="mac上 openCV的安装
@@ -130,11 +130,18 @@ cd到解压后的文件夹中，
 </code></pre><p>由于要做python项目，在import cv2时报<br><code>ImportError: No module named cv2</code>的错误，下面还要设置环境变量:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">* 打开一个终端，cd ~</div><div class="line"> </div><div class="line">* vim .profile</div><div class="line"> </div><div class="line">* 添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。</div><div class="line"> </div><div class="line">* source .profile</div></pre></td></tr></table></figure>
 <p>至此openCV的安装工作全部完成了！</p>
+<h3 id="openCV-的简单使用"><a href="#openCV-的简单使用" class="headerlink" title="openCV 的简单使用"></a>openCV 的简单使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#coding:utf-8</div><div class="line"></div><div class="line">import cv2</div><div class="line"></div><div class="line">img = cv2.imread(&apos;&apos;) #加载路径下的一张图片</div><div class="line">cv2.namedWindow(&quot;Image&quot;) #创建一个窗口</div><div class="line">cv2.imshow(&quot;Image&quot;, img) #窗口中显示图像</div><div class="line">cv2.waitKey (0) </div><div class="line">cv2.destroyAllWindows() #释放</div></pre></td></tr></table></figure>
+<h6 id="2017-04-07"><a href="#2017-04-07" class="headerlink" title="2017.04.07"></a>2017.04.07</h6><h2 id="关于openCV的进一步使用"><a href="#关于openCV的进一步使用" class="headerlink" title="关于openCV的进一步使用"></a>关于openCV的进一步使用</h2><h3 id="openCV安装后找不到相关类库"><a href="#openCV安装后找不到相关类库" class="headerlink" title="openCV安装后找不到相关类库"></a>openCV安装后找不到相关类库</h3><ul>
+<li>可以在<a href="https://realpython.com/blog/python/face-detection-in-python-using-a-webcam/" target="_blank" rel="external">这里</a> 下载及阅读人脸识别的源码，特别是readme，一定要仔细看一遍再去跑工程。关于Python2和Python3不同版本的坑已经很多了，这里同样遇到了版本不同埋的坑，openCV2和openCV3也是有很大不同的，按照blog上的提示，</li>
+<li>一定不要略过blog而去直接跑工程，</li>
+<li>一定不要略过readme就去跑工程</li>
+</ul>
+<p>会轻松很多，避免踩坑</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/11/Learning-1/" data-id="cj1cxriwd0000b3pt0w0i69m8" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/11/Learning-1/" data-id="cj1cztbu60000geptq3mll7fe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning/">learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/py/">py</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -145,10 +152,19 @@ cd到解压后的文件夹中，
     
 <nav id="article-nav">
   
+    <a href="/2017/04/11/Learning-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python learning | 二
+        
+      </div>
+    </a>
   
-    <a href="/2017/04/05/python-log/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/04/11/MyFistBlog/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">md格式学习</div>
     </a>
   
 </nav>
@@ -164,7 +180,7 @@ cd到解压后的文件夹中，
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python-learning/">python learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a></li></ul>
     </div>
   </div>
 
@@ -174,7 +190,7 @@ cd到解压后的文件夹中，
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning/">learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/py/">py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning/">learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/py/">py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li></ul>
     </div>
   </div>
 
@@ -184,7 +200,7 @@ cd到解压后的文件夹中，
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/py/" style="font-size: 10px;">py</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+      <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/py/" style="font-size: 20px;">py</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
     </div>
   </div>
 
@@ -206,19 +222,23 @@ cd到解压后的文件夹中，
       <ul>
         
           <li>
+            <a href="/2017/04/11/Learning-3/">python learning | 三</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/11/Learning-2/">python learning | 二</a>
+          </li>
+        
+          <li>
             <a href="/2017/04/11/Learning-1/">python learning | 一</a>
           </li>
         
           <li>
-            <a href="/2017/04/05/python-log/">(no title)</a>
+            <a href="/2017/04/11/MyFistBlog/">md格式学习</a>
           </li>
         
           <li>
             <a href="/2017/04/01/guofulun/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/01/MyFistBlog/">(no title)</a>
           </li>
         
       </ul>

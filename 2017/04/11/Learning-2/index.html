@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tags | Fane`s Blog</title>
+  <title>python learning | 二 | Fane`s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Fane">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://lxking.com/tags/index.html">
+  <meta name="description" content="常用类库安装及学习硬件操作相关 pyfirmata    可以通过pip安装： pip install pyfirmata
+邮件操作相关 yagmail    可以通过pip安装： pip install yagmail
+头文件自动补全
+关于开发工具pycharm里头文件自动补全的设置
+想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录/Library/Python/2.7/sit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python learning | 二">
+<meta property="og:url" content="http://lxking.com/2017/04/11/Learning-2/index.html">
 <meta property="og:site_name" content="Fane`s Blog">
-<meta property="og:description" content="Fane">
-<meta property="og:updated_time" content="2017-04-11T02:02:11.000Z">
+<meta property="og:description" content="常用类库安装及学习硬件操作相关 pyfirmata    可以通过pip安装： pip install pyfirmata
+邮件操作相关 yagmail    可以通过pip安装： pip install yagmail
+头文件自动补全
+关于开发工具pycharm里头文件自动补全的设置
+想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录/Library/Python/2.7/sit">
+<meta property="og:updated_time" content="2017-04-11T03:31:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Fane">
+<meta name="twitter:title" content="python learning | 二">
+<meta name="twitter:description" content="常用类库安装及学习硬件操作相关 pyfirmata    可以通过pip安装： pip install pyfirmata
+邮件操作相关 yagmail    可以通过pip安装： pip install yagmail
+头文件自动补全
+关于开发工具pycharm里头文件自动补全的设置
+想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录/Library/Python/2.7/sit">
   
     <link rel="alternate" href="/atom.xml" title="Fane`s Blog" type="application/atom+xml">
   
@@ -67,12 +79,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Learning-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/tags/index.html" class="article-date">
-  <time datetime="2017-04-11T01:38:33.000Z" itemprop="datePublished">2017-04-11</time>
+    <a href="/2017/04/11/Learning-2/" class="article-date">
+  <time datetime="2017-04-11T03:11:26.000Z" itemprop="datePublished">2017-04-11</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python-learning/">python learning</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -81,7 +97,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      python learning | 二
     </h1>
   
 
@@ -89,17 +105,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="常用类库安装及学习"><a href="#常用类库安装及学习" class="headerlink" title="常用类库安装及学习"></a>常用类库安装及学习</h3><p><strong>硬件操作相关</strong> <a href="https://github.com/tino/pyFirmata" target="_blank" rel="external">pyfirmata</a><br>    可以通过pip安装： pip install pyfirmata</p>
+<p><strong>邮件操作相关</strong> <a href="http://lxking.com">yagmail</a><br>    可以通过pip安装： pip install yagmail</p>
+<p><strong>头文件自动补全</strong></p>
+<p>关于开发工具pycharm里头文件自动补全的设置</p>
+<p>想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录<code>/Library/Python/2.7/site-packages</code>中<br>如要将openCV的文件cv.py,cv2.so链接到 /Library/Python/2.7/site-packages中的具体做法如下：</p>
+<pre><code>cd /Library/Python/2.7/site-packages
+sudo ln -s ~/opencv/build/lib/cv.py cv.py
+sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
+</code></pre><p>openCV的路径以实际自己的安装路径为准，如果没有cv.py，则创建，其中只有一行代码：</p>
+<pre><code>from cv2.cv import * 
+</code></pre><p>这就是代码的自动补全功能，其他库可以参照此方法设置</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/tags/index.html" data-id="cj1cztbul0009geptkkzy3ux5" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/11/Learning-2/" data-id="cj1cztbub0002geptaomst924" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/py/">py</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/04/11/Learning-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python learning | 三
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/11/Learning-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python learning | 一</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
