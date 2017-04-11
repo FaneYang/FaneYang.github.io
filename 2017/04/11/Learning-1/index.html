@@ -5,16 +5,37 @@
   
   <title>python learning | 一 | Fane`s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Fane">
+  <meta name="description" content="mac上 openCV的安装
+去 http://opencv.org 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩
+
+brew安装cmake   brew install cmake
+
+cd到解压后的文件夹中，
+
+继续执行如下命令：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python learning | 一">
 <meta property="og:url" content="http://lxking.com/2017/04/11/Learning-1/index.html">
 <meta property="og:site_name" content="Fane`s Blog">
-<meta property="og:description" content="Fane">
-<meta property="og:updated_time" content="2017-04-11T02:13:58.000Z">
+<meta property="og:description" content="mac上 openCV的安装
+去 http://opencv.org 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩
+
+brew安装cmake   brew install cmake
+
+cd到解压后的文件夹中，
+
+继续执行如下命令：">
+<meta property="og:updated_time" content="2017-04-11T02:33:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python learning | 一">
-<meta name="twitter:description" content="Fane">
+<meta name="twitter:description" content="mac上 openCV的安装
+去 http://opencv.org 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩
+
+brew安装cmake   brew install cmake
+
+cd到解压后的文件夹中，
+
+继续执行如下命令：">
   
     <link rel="alternate" href="/atom.xml" title="Fane`s Blog" type="application/atom+xml">
   
@@ -73,6 +94,10 @@
   <time datetime="2017-04-11T01:33:31.000Z" itemprop="datePublished">2017-04-11</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/life/">life</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -89,14 +114,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="mac上-openCV的安装"><a href="#mac上-openCV的安装" class="headerlink" title="mac上 openCV的安装"></a>mac上 openCV的安装</h3><ol>
+<li><p>去 <a href="http://opencv.org" target="_blank" rel="external">http://opencv.org</a> 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩</p>
+</li>
+<li><p>brew安装cmake   brew install cmake</p>
+</li>
+<li><p>cd到解压后的文件夹中，</p>
+</li>
+<li>继续执行如下命令：</li>
+</ol>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">* mkdir release</div><div class="line">	</div><div class="line">* cd release</div><div class="line">	</div><div class="line">* cmake -G &quot;Unix Makefiles&quot; ..</div><div class="line">	</div><div class="line">* make   	#此处会进行make的相关操作，会耗费很大一会</div><div class="line">	</div><div class="line">* sudo make install	#install lib文件到/usr/local/lib/，头文件到 /usr/local/include/</div></pre></td></tr></table></figure>
+<p>至此，openCV安装完成</p>
+<pre><code>注：如果cmake出现错误，请到苹果开发者网站那里下载Command Line Tools安装。（关键）
+</code></pre><p>由于要做python项目，在import cv2时报<br><code>ImportError: No module named cv2</code>的错误，下面还要设置环境变量:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">* 打开一个终端，cd ~</div><div class="line"> </div><div class="line">* vim .profile</div><div class="line"> </div><div class="line">* 添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。</div><div class="line"> </div><div class="line">* source .profile</div></pre></td></tr></table></figure>
+<p>至此openCV的安装工作全部完成了！</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lxking.com/2017/04/11/Learning-1/" data-id="cj1cx2ok500047uptsfomdwxq" class="article-share-link">Share</a>
+      <a data-url="http://lxking.com/2017/04/11/Learning-1/" data-id="cj1cxnrcu0000agptbqfrny0i" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tags/">tags</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning/">learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/py/">py</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </footer>
   </div>
@@ -120,13 +161,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/tags/">tags</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning/">learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/py/">py</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -136,7 +184,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/tags/" style="font-size: 10px;">tags</a>
+      <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/py/" style="font-size: 10px;">py</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
     </div>
   </div>
 
