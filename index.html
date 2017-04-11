@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,15 +87,15 @@
 
 
 
-<meta name="description" content="Fane">
+<meta name="description" content="划出自己的轨迹">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Fane`s Blog">
 <meta property="og:url" content="http://lxking.com/index.html">
 <meta property="og:site_name" content="Fane`s Blog">
-<meta property="og:description" content="Fane">
+<meta property="og:description" content="划出自己的轨迹">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fane`s Blog">
-<meta name="twitter:description" content="Fane">
+<meta name="twitter:description" content="划出自己的轨迹">
 
 
 
@@ -103,13 +103,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -132,7 +132,7 @@
   <title> Fane`s Blog </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            首页
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -227,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -263,9 +263,9 @@
     <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/Learning-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fane Young">
+      <meta itemprop="name" content="fane">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -297,9 +297,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T11:17:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T11:17:00+08:00">
                 2017-04-11
               </time>
             
@@ -318,7 +318,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -334,6 +334,17 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/Learning-3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/11/Learning-3/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -358,39 +369,14 @@
 
       
         
-          
-            <h2 id="爬虫相关"><a href="#爬虫相关" class="headerlink" title="爬虫相关"></a>爬虫相关</h2><p>关于scrapy 和 pyspider<br>pyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider </p>
-<p>安装都是通过 pip 来安装。</p>
-<h3 id="scrapy-安装"><a href="#scrapy-安装" class="headerlink" title="scrapy 安装"></a>scrapy 安装</h3><pre><code>pip install scrapy
-</code></pre><p>安装时一直报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Found existing installation: six 1.4.1</div><div class="line">DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.</div><div class="line">    Uninstalling six-1.4.1:</div><div class="line">Exception:</div></pre></td></tr></table></figure></p>
-<p>在Stack Overflow上找到解决方法：</p>
-<pre><code>sudo pip install scrapy --ignore-installed six
-</code></pre><h4 id="pyspider的安装及遇到的问题"><a href="#pyspider的安装及遇到的问题" class="headerlink" title="pyspider的安装及遇到的问题"></a>pyspider的安装及遇到的问题</h4><pre><code>pip install pyspider
-</code></pre><p>出现报错，关键点是：</p>
-<pre><code>opetation not permitted
-</code></pre><p>问题分析：在经历了Xcdoe ghost以后，苹果加强了安全控制，启用了更高的安全性保护机制 —系统完整性保护（system Integrity Protection）SIP,在10.11以上的版本会出现此类错误，即使是sudo模式。</p>
-<p>解决这个的办法是：<br><img src="file:///Users/faneyoung/Desktop/modSetting.png" alt=""></p>
-<p>在安装完相应类库后，再次进入恢复模式开启SIP：</p>
-<pre><code>csrutil anable
-</code></pre><p><strong>pyspider的使用</strong></p>
-<p>在pyspider安装成功后，执行pyspider命令出现：</p>
-<pre><code>phantomjs not found, continue running without it.
-</code></pre><p>这是缺少phantomjs引起的。</p>
-<p><strong>PhantomJS</strong></p>
-<p>PhantomJS 是一个基于 WebKit 的服务器端 JavaScript API。它全面支持web而不需浏览器支持，其快速，原生支持各种Web标准： DOM 处理, CSS 选择器, JSON, Canvas, 和 SVG。 PhantomJS 可以用于 页面自动化 ， 网络监测 ， 网页截屏 ，以及 无界面测试 等。<br>mac下通过 brew 安装 ：</p>
-<pre><code>brew install phantomjs
-</code></pre><p>再次执行pyspider<br>有出现新问题：</p>
-<pre><code>pyspider Error: Could not create web server listening on port 25555
-</code></pre><p><strong>接着折腾</strong></p>
-<p>在github的issue中找到</p>
-<pre><code>#423  : Reboot the PC,or remove phantomjs can fix it.
-</code></pre><p>刚装过phantomjs，不可能现在就卸载，所以 重启<br>竟然成功了<br>重新 执行 pyspider </p>
-<pre><code>输出：phantomjs fetcher running on port 25555
-</code></pre><p>启动成功了 ！</p>
-<p>打开浏览器访问 <a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a></p>
-<p>至此，pyspider安装完成了，后面就要对scrapy和pyspider的进一步深入学习</p>
-
-          
+          <h2 id="爬虫相关"><a href="#爬虫相关" class="headerlink" title="爬虫相关"></a>爬虫相关</h2><p>关于scrapy 和 pyspider<br>pyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/11/Learning-3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -435,9 +421,9 @@
     <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/Learning-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fane Young">
+      <meta itemprop="name" content="fane">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -469,9 +455,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T11:11:26+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T11:11:26+08:00">
                 2017-04-11
               </time>
             
@@ -490,7 +476,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -506,6 +492,17 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/Learning-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/11/Learning-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -530,20 +527,14 @@
 
       
         
-          
-            <h3 id="常用类库安装及学习"><a href="#常用类库安装及学习" class="headerlink" title="常用类库安装及学习"></a>常用类库安装及学习</h3><p><strong>硬件操作相关</strong> <a href="https://github.com/tino/pyFirmata" target="_blank" rel="external">pyfirmata</a><br>    可以通过pip安装： pip install pyfirmata</p>
-<p><strong>邮件操作相关</strong> <a href="http://lxking.com">yagmail</a><br>    可以通过pip安装： pip install yagmail</p>
-<p><strong>头文件自动补全</strong></p>
-<p>关于开发工具pycharm里头文件自动补全的设置</p>
-<p>想要某个文件或者lib里的文件能够自动补全，则需要将它们链接到目录<code>/Library/Python/2.7/site-packages</code>中<br>如要将openCV的文件cv.py,cv2.so链接到 /Library/Python/2.7/site-packages中的具体做法如下：</p>
-<pre><code>cd /Library/Python/2.7/site-packages
-sudo ln -s ~/opencv/build/lib/cv.py cv.py
-sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
-</code></pre><p>openCV的路径以实际自己的安装路径为准，如果没有cv.py，则创建，其中只有一行代码：</p>
-<pre><code>from cv2.cv import * 
-</code></pre><p>这就是代码的自动补全功能，其他库可以参照此方法设置</p>
-
-          
+          <h4 id="常用类库安装及学习"><a href="#常用类库安装及学习" class="headerlink" title="常用类库安装及学习"></a>常用类库安装及学习</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/11/Learning-2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -588,9 +579,9 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
     <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/Learning-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fane Young">
+      <meta itemprop="name" content="fane">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -622,9 +613,9 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
                 2017-04-11
               </time>
             
@@ -643,7 +634,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -659,6 +650,17 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/Learning-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/11/Learning-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -683,19 +685,11 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
 
       
         
-          <h3 id="mac上-openCV的安装"><a href="#mac上-openCV的安装" class="headerlink" title="mac上 openCV的安装"></a>mac上 openCV的安装</h3><ol>
-<li><p>去 <a href="http://opencv.org">http://opencv.org</a> 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩</p>
-</li>
-<li><p>brew安装cmake   brew install cmake</p>
-</li>
-<li><p>cd到解压后的文件夹中，</p>
-</li>
-<li>继续执行如下命令：</li>
-</ol>
+          <h4 id="mac上-openCV的安装"><a href="#mac上-openCV的安装" class="headerlink" title="mac上 openCV的安装"></a>mac上 openCV的安装</h4>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/11/Learning-1/#more" rel="contents">
-              Lire la suite &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -743,9 +737,9 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
     <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/MyFistBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fane Young">
+      <meta itemprop="name" content="fane">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -777,9 +771,9 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
                 2017-04-11
               </time>
             
@@ -798,7 +792,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -814,6 +808,17 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/MyFistBlog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/11/MyFistBlog/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -838,35 +843,14 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
 
       
         
-          
-            <h2 id="md格式学习"><a href="#md格式学习" class="headerlink" title="md格式学习"></a>md格式学习</h2><h3 id="lt-论语-gt"><a href="#lt-论语-gt" class="headerlink" title="&lt;论语&gt;"></a>&lt;论语&gt;</h3><blockquote>
-<p>孔子曰:<br>打架用砖乎!<br>不亦乱乎! 照脸乎!<br>乎不死,再乎!</p>
-</blockquote>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1491036873809&amp;di=e8415f1c4a1addb62b50f0c7a13d5471&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D3a1291116a224f4a5799731b39f69044%2F9c5a30f082025aaf2ce699fcfcedab64024f1afe.jpg" alt="孔子用砖图"></p>
-<p><a href="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1491036873809&amp;di=e8415f1c4a1addb62b50f0c7a13d5471&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D3a1291116a224f4a5799731b39f69044%2F9c5a30f082025aaf2ce699fcfcedab64024f1afe.jpg" target="_blank" rel="external"><em>孔子用转图</em></a></p>
-<h6 id="以下全是重要内容"><a href="#以下全是重要内容" class="headerlink" title="以下全是重要内容"></a>以下全是重要内容</h6><p>孔子用代码教育弟子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">def husi()</div><div class="line">	print &apos;岂可一人独乎 !&apos;</div><div class="line"></div><div class="line">husi();</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">def test()</div><div class="line">	print &apos;大家一起乎,不亦乐乎&apos;</div><div class="line">test()</div></pre></td></tr></table></figure>
-<p>*代码版权归属 <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x75;&#116;&#114;&#97;&#x73;&#110;&#111;&#119;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x75;&#116;&#114;&#97;&#x73;&#110;&#111;&#119;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
-<p>放个数学公式：</p>
-<math display="block"><br>    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup><br>    <mo>=</mo><br>    <mi>B</mi><br></math>
-
-
-
-<p><a href="https://www.xcenery.com" target="_blank" rel="external">更多内容联系作者</a></p>
-<p><a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#102;&#97;&#x6e;&#101;&#121;&#111;&#x75;&#110;&#x67;&#64;&#104;&#x6f;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#102;&#97;&#x6e;&#101;&#121;&#111;&#x75;&#110;&#x67;&#64;&#104;&#x6f;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
-<h2 id="这是无序列表"><a href="#这是无序列表" class="headerlink" title="这是无序列表"></a>这是无序列表</h2><ul>
-<li>这是一个无序列表的L1</li>
-<li>L2</li>
-<li>L3</li>
-<li>L4</li>
-</ul>
-<h2 id="这是有序列表"><a href="#这是有序列表" class="headerlink" title="这是有序列表"></a>这是有序列表</h2><ol>
-<li>row1</li>
-<li>row2</li>
-<li>row3</li>
-</ol>
-
-          
+          <h2 id="md格式学习"><a href="#md格式学习" class="headerlink" title="md格式学习"></a>md格式学习</h2><h3 id="lt-论语-gt"><a href="#lt-论语-gt" class="headerlink" title="&lt;论语&gt;"></a>&lt;论语&gt;</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/11/MyFistBlog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -908,12 +892,12 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/01/guofulun/">
+    <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/guofulun/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fane Young">
+      <meta itemprop="name" content="fane">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -930,8 +914,8 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
             
               
                 
-                <a class="post-title-link" href="/2017/04/01/guofulun/" itemprop="url">
-                  Non titré
+                <a class="post-title-link" href="/2017/04/11/guofulun/" itemprop="url">
+                  国富论
                 </a>
               
             
@@ -945,10 +929,10 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-01T16:27:55+08:00">
-                2017-04-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
+                2017-04-11
               </time>
             
 
@@ -958,8 +942,41 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/11/guofulun/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/11/guofulun/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -984,12 +1001,14 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
 
       
         
-          
-            <h1 id="国富论"><a href="#国富论" class="headerlink" title="国富论"></a>国富论</h1><h3 id="亚当-斯密"><a href="#亚当-斯密" class="headerlink" title="亚当.斯密"></a>亚当.斯密</h3><p>这是国家复兴的秘密，这是一代伟大人物的独特视角！</p>
-<p><a href="http://www.lxking.com" target="_blank" rel="external">想看更多</a></p>
-<p><strong>给作者留言</strong> <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x75;&#x74;&#x72;&#97;&#x73;&#x6e;&#111;&#119;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x75;&#x74;&#x72;&#97;&#x73;&#x6e;&#111;&#119;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a></p>
-
-          
+          <h1 id="国富论"><a href="#国富论" class="headerlink" title="国富论"></a>国富论</h1><h3 id="亚当-斯密"><a href="#亚当-斯密" class="headerlink" title="亚当.斯密"></a>亚当.斯密</h3><p>这是国家复兴的秘密，这是一代伟大人物的独特视角！</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/11/guofulun/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1055,11 +1074,11 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Fane Young" />
-          <p class="site-author-name" itemprop="name">Fane Young</p>
+               src="/images/avatar.png"
+               alt="fane" />
+          <p class="site-author-name" itemprop="name">fane</p>
            
-              <p class="site-description motion-element" itemprop="description">Fane</p>
+              <p class="site-description motion-element" itemprop="description">划出自己的轨迹</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -1068,7 +1087,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">articles</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -1079,7 +1098,7 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
@@ -1089,8 +1108,8 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -1135,18 +1154,18 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Fane Young</span>
+  <span class="author" itemprop="copyrightHolder">fane</span>
 </div>
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Thème -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
@@ -1231,6 +1250,14 @@ sudo ln -s ~/opencv/build/lib/cv2.so cv2.so
 
   
 
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
 
   
 
