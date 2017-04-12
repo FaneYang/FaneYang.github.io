@@ -961,12 +961,9 @@ pre .javascript .function {
   background: #fff;
 }
 .header {
-  background: url("../images/background.jpg");
+  background: url("../images/headerLandscap.jpg");
 }
 ## 会重复平铺,
-#.header {
-  background: url("../images/background.jpg");
-}
 .header-inner {
   position: relative;
 }
@@ -1813,7 +1810,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #00b332;
+  background: #0db5b3;
 }
 .links-of-blogroll {
   font-size: 13px;
