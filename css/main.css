@@ -957,8 +957,11 @@ pre .javascript .function {
 .back-to-top.back-to-top-on {
   bottom: 19px;
 }
-.header {
+#.header {
   background: #fff;
+}
+.header {
+  background: url("../images/background.jpg");
 }
 .header-inner {
   position: relative;
@@ -1806,7 +1809,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a13eff;
+  background: #ffc6ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2653,6 +2656,6 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
-body {
-  background: url("/images/background.jpg");
+#body {
+  background: url("/images/background.jpg") top left;
 }
