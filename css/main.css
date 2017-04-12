@@ -965,7 +965,6 @@ pre .javascript .function {
 }
 ## 会重复平铺,
 .header {
-  background-size: auto;
   background: url("../images/background.jpg");
 }
 .header-inner {
@@ -1814,7 +1813,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff67ff;
+  background: #5c98bd;
 }
 .links-of-blogroll {
   font-size: 13px;
