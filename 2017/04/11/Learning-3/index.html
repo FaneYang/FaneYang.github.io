@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,py," />
+  <meta name="keywords" content="py,python,爬虫," />
 
 
 
@@ -87,17 +87,20 @@
 
 
 
-<meta name="description" content="爬虫相关关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
+<meta name="description" content="爬虫相关
+关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python learning | 三">
 <meta property="og:url" content="http://lxking.com/2017/04/11/Learning-3/index.html">
 <meta property="og:site_name" content="Fane`s Blog">
-<meta property="og:description" content="爬虫相关关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
+<meta property="og:description" content="爬虫相关
+关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
 <meta property="og:image" content="http://lxking.com/file:///Users/faneyoung/Desktop/modSetting.png">
-<meta property="og:updated_time" content="2017-04-11T05:51:11.000Z">
+<meta property="og:updated_time" content="2017-04-12T06:59:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python learning | 三">
-<meta name="twitter:description" content="爬虫相关关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
+<meta name="twitter:description" content="爬虫相关
+关于scrapy 和 pyspiderpyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider">
 <meta name="twitter:image" content="http://lxking.com/file:///Users/faneyoung/Desktop/modSetting.png">
 
 
@@ -400,12 +403,15 @@
       
 
       
-        <h2 id="爬虫相关"><a href="#爬虫相关" class="headerlink" title="爬虫相关"></a>爬虫相关</h2><p>关于scrapy 和 pyspider<br>pyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider<br><a id="more"></a><br>安装都是通过 pip 来安装。</p>
-<h3 id="scrapy-安装"><a href="#scrapy-安装" class="headerlink" title="scrapy 安装"></a>scrapy 安装</h3><pre><code>pip install scrapy
+        <p>爬虫相关</p>
+<p>关于scrapy 和 pyspider<br>pyspider 有自己的操作界面，scrapy项目基于框架写代码，调试的难度高于pyspider<br><a id="more"></a><br>安装都是通过 pip 来安装。</p>
+<p><strong>scrapy 安装</strong></p>
+<pre><code>pip install scrapy
 </code></pre><p>安装时一直报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Found existing installation: six 1.4.1</div><div class="line">DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.</div><div class="line">    Uninstalling six-1.4.1:</div><div class="line">Exception:</div></pre></td></tr></table></figure></p>
 <p>在Stack Overflow上找到解决方法：</p>
 <pre><code>sudo pip install scrapy --ignore-installed six
-</code></pre><h4 id="pyspider的安装及遇到的问题"><a href="#pyspider的安装及遇到的问题" class="headerlink" title="pyspider的安装及遇到的问题"></a>pyspider的安装及遇到的问题</h4><pre><code>pip install pyspider
+</code></pre><p><strong>pyspider的安装及遇到的问题</strong></p>
+<pre><code>pip install pyspider
 </code></pre><p>出现报错，关键点是：</p>
 <pre><code>opetation not permitted
 </code></pre><p>问题分析：在经历了Xcdoe ghost以后，苹果加强了安全控制，启用了更高的安全性保护机制 —系统完整性保护（system Integrity Protection）SIP,在10.11以上的版本会出现此类错误，即使是sudo模式。</p>
@@ -479,9 +485,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/py/" rel="tag"># py</a>
+          
             <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/py/" rel="tag"># py</a>
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
           
         </div>
       
@@ -555,17 +563,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -580,7 +579,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -602,7 +601,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -638,22 +637,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#爬虫相关"><span class="nav-number">1.</span> <span class="nav-text">爬虫相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scrapy-安装"><span class="nav-number">1.1.</span> <span class="nav-text">scrapy 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pyspider的安装及遇到的问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">pyspider的安装及遇到的问题</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
