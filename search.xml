@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Learning | 七 Decorator]]></title>
       <url>%2F2017%2F04%2F27%2FLearning-7%2F</url>
-      <content type="text"><![CDATA[Decorator-切面编程Decorator 是23种经典设计模式之一 装饰器模式，是切面编程的具体实现。最显著的是数据统计，统计不同场景下用户的行为跟踪，糟糕的做法是在每个要做统计的地方写上代码，但如果有代码变动，就会影响原来的功能，这时 装饰器模式就显得有点突出了。 在不改变主体的情况下，为主体hock上新的特性和功能，这就是Decorator 使用时的原则：要确保 decorator 的返回内容仍然是一个有意义的函数或方法，并且实现了原函数为使连接有用而做的事情。 Python中的函数是对象，具有特性： 可以被赋值给其他变量 可以作为返回值 可以被定义在其他函数内 那现在对decorator详细定义： 装饰器是一个函数,一个用来包装函数的函数， 装饰器在函数调用之后返回一个修改之后的函数对象，将其重新赋值原来的标识符，并永久丧失对原始函数对象的访问(申明的函数被换成一个被装饰器装饰过后的函数) 当我们对某个方法应用了装饰方法后， 其实就改变了被装饰函数名称所引用的函数代码块入口点，使其重新指向了由装饰方法所返回的函数入口点。如object-c中用runtime对函数进行swizzling. 由此我们可以用decorator改变某个原有函数的功能，添加各种操作，或者完全改变原有实现 decorator使用时的原则是： 把要装饰的方法作为输入参数， 在函数体内可以进行任意的操作(可以想象其中蕴含的威力强大，会有很多应用场景)， 只要确保最后返回一个可执行的函数即可（可以是原来的输入参数函数， 或者是一个新函数） decorator分为 无参 和 有参 下面对 无参 和 有参decorator去包装无参和有参的函数进行示范]]></content>
+      <content type="text"><![CDATA[Decorator-切面编程Decorator 是23种经典设计模式之一 装饰器模式，是切面编程的具体实现。最显著的是数据统计，统计不同场景下用户的行为跟踪，糟糕的做法是在每个要做统计的地方写上代码，但如果有代码变动，就会影响原来的功能，这时 装饰器模式就显得有点突出了。 在不改变主体实现的情况下，为主体hock上新的特性和功能，这就是Decorator 重要的一点：要确保 decorator 的返回内容仍然是一个有意义的函数或方法，并且实现了原函数为使连接有用而做的事情。 Python中的函数是对象： 可以被赋值给其他变量 可以作为返回值 可以被定义在其他函数内 那现在对decorator详细定义： 装饰器是一个函数,一个用来包装函数的函数 装饰器在函数调用之后返回一个修改之后的函数对象，将其重新赋值原来的标识符，并永久丧失对原始函数对象的访问(申明的函数被换成一个被装饰器装饰过后的函数) 当我们对某个方法应用了装饰方法后， 其实就改变了被装饰函数名称所引用的函数代码块入口点，使其重新指向了由装饰方法所返回的函数入口点。如object-c中用runtime对函数进行swizzling. 由此我们可以用decorator改变某个原有函数的功能，添加各种操作，或者完全改变原有实现 Decorator的原则是:&gt; 把要装饰的方法作为输入参数，&gt; 在函数内可以添加一切附加的实现(这就提供了很强大的可扩展性)，&gt; 只要确保最后返回一个可执行的函数（可以是原来的origin函数，也可以是新定义的函数） decorator分为 无参 和 有参，下面对无参和有参decorator去包装无参和有参的函数进行示范 无参装饰器 &amp; 包装无参函数 def decorator(func): print &quot;hello&quot; return func @decorator def foo(): pass foo() #执行 foo()执行时相当于执行了： foo = decorator(foo) foo() 无参装饰器 &amp; 包装有参函数 def decorator_func_args(func): def handle_args(*args, **kwargs): #处理传入函数的参数 print &quot;begin&quot; func(*args, **kwargs) #函数调用 print &quot;end&quot; return handle_args @decorator_func_args def foo2(a, b=2): print a, b foo2(1) #执行 foo2(1)执行时相当于执行了： foo2 = decorator_func_args(foo2) foo2(1) 有参装饰器 &amp; 包装无参函数 def decorator_with_params(arg_of_decorator):#这里是装饰器的参数 print arg_of_decorator #最终被返回的函数 def newDecorator(func): print func return func return newDecorator @decorator_with_params(&quot;deco_args&quot;) def foo3(): pass foo3() #执行 有参装饰器 &amp; 包装有参函数 def decorator_args_func_args(decorator_args): print &apos;decorator自定义，输出：%s&apos; % decorator_args def newDecorator(func): print &apos;自定义函数实现&apos; def newFunc_args(*args,**kwargs): func(*args,**kwargs) return newFunc_args return newDecorator; @decorator_args_func_args(&apos;this is decorator_args&apos;) def func_args(a,b=18): c = a+b print &apos;func_args output,value = %s&apos; % c - - - 且听下回分解 - - -]]></content>
     </entry>
 
     
@@ -54,14 +54,14 @@
     <entry>
       <title><![CDATA[md格式学习]]></title>
       <url>%2F2017%2F04%2F11%2FMyFistBlog%2F</url>
-      <content type="text"><![CDATA[md格式学习&lt;论语&gt; 孔子曰:打架用砖乎!不亦乱乎! 照脸乎!乎不死,再乎! 孔子用转图 以下全是重要内容孔子用代码教育弟子： 12345678910def husi() print &apos;岂可一人独乎 !&apos;husi();def test() print &apos;大家一起乎,不亦乐乎&apos;test() *代码版权归属 &#117;&#116;&#x72;&#97;&#115;&#x6e;&#x6f;&#119;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d; 放个数学公式： A S T = B 更多内容联系作者 &#102;&#x61;&#110;&#101;&#121;&#111;&#x75;&#110;&#103;&#x40;&#104;&#x6f;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d; 这是无序列表 这是一个无序列表的L1 L2 L3 L4 这是有序列表 row1 row2 row3]]></content>
+      <content type="text"><![CDATA[md格式学习&lt;论语&gt; 孔子曰:打架用砖乎!不亦乱乎! 照脸乎!乎不死,再乎! 孔子用转图 以下全是重要内容孔子用代码教育弟子： 12345678910def husi() print &apos;岂可一人独乎 !&apos;husi();def test() print &apos;大家一起乎,不亦乐乎&apos;test() *代码版权归属 &#x75;&#x74;&#114;&#97;&#115;&#110;&#x6f;&#x77;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d; 放个数学公式： A S T = B 更多内容联系作者 &#x66;&#97;&#x6e;&#101;&#121;&#x6f;&#117;&#x6e;&#103;&#x40;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109; 这是无序列表 这是一个无序列表的L1 L2 L3 L4 这是有序列表 row1 row2 row3]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[国富论]]></title>
       <url>%2F2017%2F04%2F11%2Fguofulun%2F</url>
-      <content type="text"><![CDATA[国富论亚当.斯密这是国家复兴的秘密，这是一代伟大人物的独特视角！ 想看更多 给作者留言 &#x75;&#x74;&#114;&#97;&#x73;&#110;&#x6f;&#x77;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;]]></content>
+      <content type="text"><![CDATA[国富论亚当.斯密这是国家复兴的秘密，这是一代伟大人物的独特视角！ 想看更多 给作者留言 &#117;&#116;&#x72;&#97;&#x73;&#x6e;&#x6f;&#119;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;]]></content>
     </entry>
 
     
