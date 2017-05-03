@@ -715,79 +715,17 @@
 
       
         
-          
-            <p>##Python3 迭代器与生成器<br><strong>迭代器</strong></p>
+          <p>##Python3 迭代器与生成器<br><strong>迭代器</strong></p>
 <p>迭代是Python最强大的功能之一，是访问集合元素的一种方式。</p>
 <p>迭代器是一个可以记住遍历的位置的对象。</p>
-<p>迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。</p>
-<p><strong>( <em>迭代器只能往前不会后退</em> )</strong>。</p>
-<p>迭代器有两个基本的方法：iter() 和 next()。</p>
-<p>字符串，列表或元组对象都可用于创建迭代器：</p>
-<pre><code>&gt;&gt;&gt; list=[1,2,3,4]
-&gt;&gt;&gt; it = iter(list)    # 创建迭代器对象
-&gt;&gt;&gt; print (next(it))   # 输出迭代器的下一个元素
-    1
-&gt;&gt;&gt; print (next(it))
-2
-&gt;&gt;&gt; 
-</code></pre><p>迭代器对象可以使用常规for语句进行遍历：</p>
-<pre><code>#!/usr/bin/python3
-
-list=[1,2,3,4]
-it = iter(list)    # 创建迭代器对象
-for x in it:
-    print (x, end=&quot; &quot;)
-</code></pre><p>执行以上程序，输出结果如下：</p>
-<pre><code>1 2 3 4
-</code></pre><p>也可以使用 next() 函数：</p>
-<pre><code>#!/usr/bin/python3
-
-import sys         # 引入 sys 模块
-
-list=[1,2,3,4]
-it = iter(list)    # 创建迭代器对象
-
-while True:
-        try:
-            print (next(it))
-     except StopIteration:
-            sys.exit()
-</code></pre><p>执行以上程序，输出结果如下：</p>
-<pre><code>1
-2
-3
-4
-</code></pre><p><strong>生成器</strong></p>
-<p>在 Python 中，使用了 yield 的函数被称为生成器（generator）。</p>
-<p>跟普通函数不同的是，<strong>生成器是一个返回迭代器的函数</strong>，只能用于迭代操作，更简单点理解 生成器就是一个迭代器。</p>
-<p>在调用生成器运行的过程中，每次遇到 yield 时函数会暂停并保存当前所有的运行信息，返回yield的值。并在下一次执行 next()方法时从当前位置继续运行。</p>
-<p>以下实例使用 yield 实现斐波那契数列：</p>
-<pre><code>#!/usr/bin/python3
-
-import sys
-
-def fibonacci(n): # 生成器函数 - 斐波那契
-    a, b, counter = 0, 1, 0
-    while True:
-        if (counter &gt; n): 
-            return
-        yield a
-        a, b = b, a + b
-        counter += 1
-f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
-
-while True:
-    try:
-        print (next(f), end=&quot; &quot;)
-    except StopIteration:
-        sys.exit()
-</code></pre><p>执行以上程序，输出结果如下：</p>
-<pre><code>0 1 1 2 3 5 8 13 21 34 55
-</code></pre><blockquote>
-<p>有一篇更详细的的帖子，对实现斐波那契数列的不同方式内存的优劣给出了不同的例子 <a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/" target="_blank" rel="external">博客地址</a>。</p>
-</blockquote>
-
-          
+<p>迭代器对象从集合的第一个元素开始访问，直到所有的元素被访问完结束。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/14/Learning-6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1616,164 +1554,6 @@ while True:
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/guofulun/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fane">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fane's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/11/guofulun/" itemprop="url">
-                  国富论
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/other/" itemprop="url" rel="index">
-                    <span itemprop="name">其它</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/04/11/guofulun/" class="leancloud_visitors" data-flag-title="国富论">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="国富论"><a href="#国富论" class="headerlink" title="国富论"></a>国富论</h1><h3 id="亚当-斯密"><a href="#亚当-斯密" class="headerlink" title="亚当.斯密"></a>亚当.斯密</h3><p>这是国家复兴的秘密，这是一代伟大人物的独特视角！</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/guofulun/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/MyFistBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1887,6 +1667,164 @@ while True:
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/11/MyFistBlog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://lxking.com/2017/04/11/guofulun/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fane's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/11/guofulun/" itemprop="url">
+                  国富论
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T09:33:31+08:00">
+                2017-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/11/guofulun/" class="leancloud_visitors" data-flag-title="国富论">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="国富论"><a href="#国富论" class="headerlink" title="国富论"></a>国富论</h1><h3 id="亚当-斯密"><a href="#亚当-斯密" class="headerlink" title="亚当.斯密"></a>亚当.斯密</h3><p>这是国家复兴的秘密，这是一代伟大人物的独特视角！</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/11/guofulun/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
