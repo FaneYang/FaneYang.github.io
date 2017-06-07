@@ -88,24 +88,33 @@
 
 
 <meta name="description" content="subprocess
-subprocess包主要功能是执行外部的命令和程序.
+
+subprocess的目标是：启动一个新的进程并与之进行通讯
+subprocess的主要功能是：执行外部的命令和程序.
+
 subprocess以及常用的封装函数
-当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序(fork，exe">
+当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subproc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learning | 九 subprocess">
 <meta property="og:url" content="http://lxking.com/2017/06/07/Learning-9/index.html">
 <meta property="og:site_name" content="Fane's Blog">
 <meta property="og:description" content="subprocess
-subprocess包主要功能是执行外部的命令和程序.
+
+subprocess的目标是：启动一个新的进程并与之进行通讯
+subprocess的主要功能是：执行外部的命令和程序.
+
 subprocess以及常用的封装函数
-当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序(fork，exe">
-<meta property="og:updated_time" content="2017-06-07T08:28:01.000Z">
+当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subproc">
+<meta property="og:updated_time" content="2017-06-07T09:18:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learning | 九 subprocess">
 <meta name="twitter:description" content="subprocess
-subprocess包主要功能是执行外部的命令和程序.
+
+subprocess的目标是：启动一个新的进程并与之进行通讯
+subprocess的主要功能是：执行外部的命令和程序.
+
 subprocess以及常用的封装函数
-当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序(fork，exe">
+当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subproc">
 
 
 
@@ -408,7 +417,10 @@ subprocess以及常用的封装函数
 
       
         <h3 id="subprocess"><a href="#subprocess" class="headerlink" title="subprocess"></a>subprocess</h3><hr>
-<p>subprocess包主要功能是执行外部的命令和程序.</p>
+<blockquote>
+<p>subprocess的目标是：启动一个新的进程并与之进行通讯</p>
+<p>subprocess的主要功能是：执行外部的命令和程序.</p>
+</blockquote>
 <p>subprocess以及常用的封装函数</p>
 <p>当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序(fork，exec见Linux进程基础)。</p>
 <p>subprocess包中定义有数个创建子进程的函数，这些函数分别以不同的方式创建子进程，所以我们可以根据需要来从中选取一个使用。另外subprocess还提供了一些管理标准流(standard stream)和管道(pipe)的工具，从而在进程间使用文本通信。</p>
