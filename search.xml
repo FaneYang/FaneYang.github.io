@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Learning-10]]></title>
+      <url>%2F2017%2F09%2F15%2FLearning-10%2F</url>
+      <content type="text"><![CDATA[关键字 yield这是关于yield的解析，还是比较清晰的： 1234yield is a keyword that is used like return, except the function will return a generator.The first time the for calls the generator object created from your function, it will run the code in your function from the beginning until it hits yield, then it&apos;ll return the first value of the loop. Then, each other call will run the loop you have written in the function one more time, and return the next value, until there is no value to return.The generator is considered empty once the function runs but does not hit yield anymore. It can be because the loop had come to an end, or because you do not satisfy an &quot;if/else&quot; anymore. 除了能返回一个生成器外，这个关键字的功能就像return一样。第一次调用generator，会从开始执行直到遇到到yield，返回第一个值。 yield 是一个类似 return 的关键字，只是这个函数返回的是个生成器yield把一个函数变成一个 generator，不再是一个普通函数，Python 解释器会将其视为一个 generator. 那么，函数内的代码什么时候执行呢？当你使用for进行迭代的时候. 关键： 第一次迭代中你的函数会执行，从开始到达 yield 关键字，然后返回 yield 后的值作为第一次迭代的返回值. 然后，每次执行这个函数都会继续执行你在函数内部定义的那个循环的下一次，再返回那个值，直到没有可以返回的。 如果生成器内部没有定义 yield 关键字，那么这个生成器被认为成空的。这种情况可能因为是循环进行没了，或者是没有满足 if/else 条件。 1.包含yield的函数某个函数包含了yield，这意味着这个函数已经是一个Generator,这个函数就获得了迭代能力,它的执行会和其他普通的函数有很多不同. 12345def func(): print &apos;To be brave&apos; yield 11func() 此时可以看到 function（）执行后并没有看到print输出，这就是yield的作用。此时的function（）变成了一个Generator。 2.表达式yieldPython2.5以前，yield是一个语句，但现在2.5中，yield是一个表达式(Expression)，比如： 1m = yield 11 此时为m赋值的是yield 11 ，但却不是m=11，（yield 11）是一个表达式，这个表达式的值才是为m赋值的关键。后面会介绍这个赋值的方法 3.原理 1234567def h(): print &apos;Wen Chuan&apos; yield 5 print &apos;Fighting!&apos;c = h()c.next() 在c.next()调用前，h()函数并没有执行。调用c.next()后，h()函数开始执行，直到找到yield位置结束执行。再次调用c.next()，函数会从上次结束的位置继续往下执行，直到遇到下一个yield，再次停止。如果没有下一个yield了，就会抛出异常结束。 这就是包含yield的函数执行的特点。 4.next()和send(msg)上面给出了yield函数执行的特点，同时也看到了next()的功能。再来一个和它功能相识的函数send()。区别是send()可以传递yield表达式的值进去，而next()不能传递特定的值，因此c.next() 和 c.send(None)的作用是一样的。 12345678910def h(): print &apos;Wen Chuan&apos;, m = yield 5 # Fighting! print m d = yield 12 print &apos;We are together!&apos;c = h()c.next() #相当于c.send(None)c.send(&apos;Fighting!&apos;) #(yield 5)表达式被赋予了&apos;Fighting!&apos;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Learning | 九 subprocess]]></title>
       <url>%2F2017%2F06%2F07%2FLearning-9%2F</url>
       <content type="text"><![CDATA[subprocess 当我们运行python的时候，我们都是在创建并运行一个进程。正如我们在Linux进程基础中一样，一个进程可以fork一个子进程，并让这个子进程exec另外一个程序。在Python中，我们通过标准库中的subprocess包来fork一个子进程，并运行一个外部的程序(fork，exec见Linux进程基础)。 subprocess的目标是：启动一个新的进程并与之进行通讯 subprocess的主要功能是：执行外部的命令和程序. subprocess以及常用的封装函数 subprocess包中定义有数个创建子进程的函数，这些函数分别以不同的方式创建子进程，所以我们可以根据需要来从中选取一个使用。另外subprocess还提供了一些管理标准流(standard stream)和管道(pipe)的工具，从而在进程间使用文本通信。]]></content>
@@ -59,13 +66,6 @@
 
     
     <entry>
-      <title><![CDATA[md格式学习]]></title>
-      <url>%2F2017%2F04%2F11%2FMyFistBlog%2F</url>
-      <content type="text"><![CDATA[md格式学习&lt;论语&gt; 孔子曰:打架用砖乎!不亦乱乎! 照脸乎!乎不死,再乎! 孔子用转图 以下全是重要内容孔子用代码教育弟子： 12345678910def husi() print &apos;岂可一人独乎 !&apos;husi();def test() print &apos;大家一起乎,不亦乐乎&apos;test() *代码版权归属 &#x75;&#x74;&#114;&#x61;&#x73;&#x6e;&#111;&#119;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#109; 放个数学公式： A S T = B 更多内容联系作者 &#102;&#x61;&#x6e;&#x65;&#x79;&#x6f;&#x75;&#110;&#103;&#64;&#x68;&#x6f;&#116;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d; 这是无序列表 这是一个无序列表的L1 L2 L3 L4 这是有序列表 row1 row2 row3]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[python learning | 一]]></title>
       <url>%2F2017%2F04%2F11%2FLearning-1%2F</url>
       <content type="text"><![CDATA[mac上 openCV的安装在mac上安装openCV的过程还是挺曲折的，下面列出安装的详细步骤及在安装过程中遇到的问题 去 http://opencv.org 下载最新版OpenCV for Linux/Mac源文件tar.gz文件，解压缩 brew安装cmake brew install cmake cd到解压后的文件夹中， 继续执行如下命令： 1234567891.mkdir release 2.cd release 3.cmake -G &quot;Unix Makefiles&quot; .. 4.make #此处会进行make的相关操作，会耗费很大一会 5.sudo make install #install lib文件到/usr/local/lib/，头文件到 /usr/local/include/ 至此，openCV安装完成 注：如果cmake出现错误，请到苹果开发者网站那里下载Command Line Tools安装。（关键） 由于要做python项目，在import cv2时报ImportError: No module named cv2的错误，下面还要设置环境变量: 12345671.打开一个终端，cd ~ 2.vim .profile 3.添加export PYTHONPATH=/usr/local/lib/python2.7/site-packages/，其中python2.7根据个人python版本而定。 4.source .profile 至此openCV的安装工作全部完成了！ openCV 的简单使用123456789#coding:utf-8import cv2img = cv2.imread(&apos;&apos;) #加载路径下的一张图片cv2.namedWindow(&quot;Image&quot;) #创建一个窗口cv2.imshow(&quot;Image&quot;, img) #窗口中显示图像cv2.waitKey (0) cv2.destroyAllWindows() #释放 2017.04.07关于openCV的进一步使用openCV安装后找不到相关类库 可以在这里 下载及阅读人脸识别的源码，特别是readme，一定要仔细看一遍再去跑工程。关于Python2和Python3不同版本的坑已经很多了，这里同样遇到了版本不同埋的坑，openCV2和openCV3也是有很大不同的，按照blog上的提示， 一定不要略过blog而去直接跑工程一定不要略过readme 会轻松很多，避免踩坑]]></content>
@@ -75,7 +75,14 @@
     <entry>
       <title><![CDATA[国富论]]></title>
       <url>%2F2017%2F04%2F11%2Fguofulun%2F</url>
-      <content type="text"><![CDATA[国富论亚当.斯密这是国家复兴的秘密，这是一代伟大人物的独特视角！ 想看更多 给作者留言 &#117;&#116;&#x72;&#97;&#115;&#x6e;&#x6f;&#x77;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;]]></content>
+      <content type="text"><![CDATA[国富论亚当.斯密这是国家复兴的秘密，这是一代伟大人物的独特视角！ 想看更多 给作者留言 &#x75;&#x74;&#114;&#x61;&#115;&#110;&#111;&#119;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[md格式学习]]></title>
+      <url>%2F2017%2F04%2F11%2FMyFistBlog%2F</url>
+      <content type="text"><![CDATA[md格式学习&lt;论语&gt; 孔子曰:打架用砖乎!不亦乱乎! 照脸乎!乎不死,再乎! 孔子用转图 以下全是重要内容孔子用代码教育弟子： 12345678910def husi() print &apos;岂可一人独乎 !&apos;husi();def test() print &apos;大家一起乎,不亦乐乎&apos;test() *代码版权归属 &#117;&#x74;&#x72;&#97;&#x73;&#110;&#x6f;&#119;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d; 放个数学公式： A S T = B 更多内容联系作者 &#102;&#97;&#110;&#x65;&#121;&#x6f;&#x75;&#x6e;&#x67;&#x40;&#104;&#x6f;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109; 这是无序列表 这是一个无序列表的L1 L2 L3 L4 这是有序列表 row1 row2 row3]]></content>
     </entry>
 
     
